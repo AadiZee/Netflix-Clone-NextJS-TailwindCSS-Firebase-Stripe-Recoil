@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This was a big one. You can't play movies on this (everything else is same as what netflix has). But anyway here is a list of all the features of the project:
 
-## Getting Started
+-Netflix clone but it is completly dark themed
 
-First, run the development server:
+-NEXT JS as frontend library with typescript
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+-Tailwind Css with some plugins for styling everything
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-Global Css created using Tailwind layers for targeting components and classes
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+-Typescript with strict type definitions to make sure that there are minimum errors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+-Env to keep sensitive info private such as firebase config, movie api config etc
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-Custom scrollbar to make the scrollbar of the page just like the one netflix has
 
-## Learn More
+-Navbar fixed with background change on scroll
 
-To learn more about Next.js, take a look at the following resources:
+-Banner image, banner movie title, banner movie description are dynamically fetched on random on each render.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-Responsive Web app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-Server side props to fetch all movie data
 
-## Deploy on Vercel
+-Authentication using firebase 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-Authentication form using react hook form
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-Authentication form validation using react hook form
+
+-Custom hooks created for handling user authentication and user validation (useAuth)
+
+-Recoil for react state management (alternate to redux for smaller projects)
+
+-MUI modal to show movie deatils including autoplaying trailer and options to add it to my list.
+
+-Adding to mylist will add the move to mylist which will be displayed on the homepage
+
+-Subscription Plans if a new user signs up using a dedicated plans page just like netflix
+
+-Stripe integration for payment of selected plan (testing account of stripe)
+
+-Plan payments is handled by stripe portal and user is redirected back to our site after payment is successfull or if payment is rejected/cancelled for any reason
+
+-Customized the stripe payment customer side page a little bit to match the overall theme
+
+-Custom hook to manage current status of user subscription/plan (useSubscription)
+
+-Account page which can be accessed by clicking on the image at the top right of nav bar
+
+-Once the account page is opened the user can manage their subscriptions and other account related settings on this page
+
+-Another custom Hook created to manage the MyList component that manages the movies that are added to myList by a user (useList)
+
+-The mylist is saved for every user in firebase
+
+-Used react hot toast pakcage to show notifications when a user adds or removes a movie from myList
+
+And now for the technical stuff. Here are all the packages that i have used to complete this fun project:
+
+    @heroicons/react: For icons used within the app.
+    @mui/material: For some components like modal and hamburger menu.
+    axios: for api calls.
+    dotenv: for keeping important information hidden.
+    firebase: as a database for both users and payments.
+    next: for handling all the frontend functionalities.
+    react-hook-form: for forms and validations used in auth pages.
+    react-hot-toast: for showing notifications.
+    react-icons: For icons used within the app that were not present in hero-icons.
+    react-player: For playing trailers etc.
+    recoil: For state management.
+    tailwindcss: For all the styling.
+
